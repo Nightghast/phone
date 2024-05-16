@@ -1,0 +1,358 @@
+header {
+    font-size: 50px;
+    color: aquamarine;
+    text-align: center;
+}
+body {
+    
+    background-image: 
+    url('https://cdnb.artstation.com/p/assets/images/images/052/004/767/original/yurii-ray-06-gif-export-200.gif?1658731969&dl=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Breeze Sans", sans-serif;
+}
+#container {
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 130px;
+    /* background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), 
+        url('https://i.pinimg.com/originals/28/56/c7/2856c73f9a6709b0563b59a9706881f8.gif'); */
+    
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), 
+    url('https://i.redd.it/kf45lqdfiyb31.gif');
+    background-size: cover;
+    width: 400px; /* Set width of the box */
+    height: 800px;
+    border-radius: 60px;
+    border: 20px solid rgb(255, 255, 255); /* set initial border */
+}
+.home {
+    color: white;
+    /* background-color: #34A853; */
+    /* background-size: 500px; */
+}
+.homeDetails {
+    text-align: center;
+    padding: 200px 100px 100px 100px;
+    font-size: 30px;
+}
+.icons button {
+    width: 90px; 
+    height: 90px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 30px;
+    margin: 30px 5px 25px 30px;
+    /* padding: 15px; */
+}
+.homeButtonDiv {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#homeButton {
+    width: 70px; 
+    height: 70px;
+    background-color: rgba(128, 128, 128, 0.61);
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    margin: 30px 5px 25px 30px;
+}
+#icon0 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#icon1 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Google_Contacts_icon.svg/512px-Google_Contacts_icon.svg.png');
+    background-position: center;
+    background-size: 125px 125px; 
+}
+#icon2 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Google_Messages_logo.svg');
+    background-position: center;
+    background-size: 125px 125px; 
+}
+#icon3 {
+    background-image: url('https://downloadr2.apkmirror.com/wp-content/uploads/2023/10/31/6528c2ca8d57b_com.sec.android.app.camera.png');
+    background-position: center;
+    background-size: 90px 90px; 
+}
+#icon4 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSHC4j0Rsieuv5NSAAFmq51OneORxsmHmQ4LKyBYEVrw&s');
+    background-position: center;
+    background-size: 105px 105px; 
+}
+#icon5 {
+    background-image: url('https://play-lh.googleusercontent.com/rPJjfIPXYy_XrZfTuofKfCJH54SRtjzU-eOYAXv-geSm-0hv1csnpBeEtztSHycYFlU');
+    background-position: center;
+    background-size: 125px 125px; 
+}
+#icon6 {
+    background-image: url('https://downloadr2.apkmirror.com/wp-content/uploads/2023/02/76/63e7ec06854e6-384x384.png');
+    background-position: center;
+    background-size: 90px 90px; 
+}
+#icon7 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png');
+    background-position: center;
+    background-size: 125px 100px; 
+}
+#icon8 {
+    background-image: url('https://icons.iconarchive.com/icons/dtafalonso/android-l/512/Chrome-icon.png');
+    background-position: center;
+    background-size: 125px 125px; 
+}
+#icon9 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png');
+    background-position: center;
+    background-size: 125px 125px; 
+}
+.contacts h2, .messages h2, .gallery h2, .camera h2, .notepad h2 {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 40px;
+    color: white;
+}
+.addContactsDiv {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 80px;
+}
+#addContacts, #removeContacts {
+    font-size: 20px;
+    width: 30px;
+}
+.mesDiv, #galleryDiv {
+    margin-top: 125px;
+    height: 350px;
+    overflow-y: auto;
+    /* background-color: aquamarine; */
+}
+.con-div{
+    margin-top: 5px;
+    height: 350px;
+    overflow-y: auto;
+}
+#con1, #con2, #con3, #con4, #con5, #con6 {
+    width: 150;
+    height: 300;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 20px;
+    font-size: 30px;
+    padding: 15px;
+    background-color: rgba(160, 163, 165, 0.664);
+}
+#mes1, #mes2, #mes3, #mes4, #mes5, #mes6 {
+    width: 150;
+    height: 100;
+    border: 0;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgba(160, 163, 165, 0.664);
+} 
+#galleryDiv {
+    text-align: center;
+}
+#galleryDiv img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    margin: 10px;
+}
+.google, .youtube {
+    text-align: center;
+    margin-top: 300px;
+}
+.spotify {
+    margin-top: 100px;
+}
+.google h2 {
+    font-size: 40px;
+    color: #4285F4;
+    background-clip: text;
+}
+.youtube h2 {
+    font-size: 40px;
+    color: red;
+    background-clip: text;
+}
+.spotify h2, h4 {
+    font-size: 40px;
+    color: #34A853;
+    background-clip: text;
+    text-align: center;
+}
+.spotify h4 {
+    font-size: 20px;
+    color: #34A853;
+    background-clip: text;
+    text-align: center;
+}
+.googleDiv, .youtubeDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.googleDiv button, .youtubeDiv button {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(248, 236, 236, 0.63);
+}
+.google input, .youtube input {
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 40px;
+}
+
+#song1, #song2, #song3, #song4, #song5 {
+    width: 150;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 15px;
+    padding: 20px;
+    /* background-color: rgba(160, 163, 165, 0.664); */
+    
+}
+#song1 {
+    background-image: 
+        linear-gradient(rgba(110, 106, 106, 0.671), rgba(0, 0, 0, 0.500)), 
+        url('https://archive.org/download/LostInSpaceCloserCover/570d95e059841aaf53a22bb5dc5f238b.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#song2 {
+    background-image: 
+        linear-gradient(rgba(48, 45, 45, 0.671), rgba(0, 0, 0, 0.500)), 
+        url('https://images.genius.com/93e9e3fa0ab18bc4613d385f287090c6.1000x1000x1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#song3 {
+    background-image: 
+        linear-gradient(rgba(248, 247, 247, 0.671), rgba(0, 0, 0, 0.500)), 
+        url('https://i1.sndcdn.com/artworks-000438083241-c2ymws-t500x500.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#song4 {
+    background-image: 
+        linear-gradient(rgba(48, 45, 45, 0.671), rgba(0, 0, 0, 0.500)), 
+        url('https://i1.sndcdn.com/artworks-000579326945-gbd9ep-t500x500.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#song5 {
+    background-image: 
+        linear-gradient(rgba(161, 153, 153, 0.671), rgba(0, 0, 0, 0.500)), 
+        url('https://i1.sndcdn.com/artworks-000073742971-x8ly4d-t500x500.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.songDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 400px;
+    overflow-y: auto;
+}
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.song div {
+    flex-grow: 1;
+}
+.song button {
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.432);
+    border-radius: 100px;
+    border: 0;
+}
+.song button:hover {
+    background-color: rgba(136, 129, 129, 0.432);
+}
+.camera {
+    text-align: center;
+    color: white;
+}
+.camera input {
+    /* width: 150px; */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+
+}
+.camera input:hover {
+    background-color: #0056b3;
+}
+.camera img {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 60px;
+}
+.notepad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.notepad textarea {
+    border-radius: 20px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+}
+#createNotes {
+    margin-left: 60%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b69322;
+}
+#saveWrite {
+    margin-top: 25px;
+    height: 250px;
+    overflow-y: auto;
+}
+#saveWrite div {
+    text-align: left;
+    margin: 2px 20px;
+    padding: 10px 5px;
+    /* border-radius: 5px; */
+    background-color: #ffffffb2;
+}
+
+footer {
+    margin-top: 45%;
+    padding: 5px;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%; /* Ensure footer spans the entire width of the container */
+    height: 50px; /* Adjust height as needed */
+    font-size: 20px;
+    color: aquamarine;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color */
+}
