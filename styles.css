@@ -11,18 +11,30 @@ body {
     background-repeat: no-repeat;
     font-family: "Breeze Sans", sans-serif;
 }
+
+@keyframes borderGradient {
+    0% {
+        border-color: #ff0000; /* Start color */
+      }
+      25% {
+        border-color: #ffff00; /* Second color */
+      }
+      50% {
+        border-color: #00ff00; /* Third color */
+      }
+      75% {
+        border-color: #00ffff; /* Fourth color */
+      }
+      100% {
+        border-color: #0000ff; /* End color */
+      }
+  }
+
 #container {
-    /* position: relative; */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    margin-top: 130px;
-    /* background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), 
-        url('https://i.pinimg.com/originals/28/56/c7/2856c73f9a6709b0563b59a9706881f8.gif'); */
-    
+    transform: translate(-50%, -50%);   
     background-image: 
     linear-gradient(rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500)), 
     url('https://i.redd.it/kf45lqdfiyb31.gif');
@@ -31,6 +43,8 @@ body {
     height: 800px;
     border-radius: 60px;
     border: 20px solid rgb(255, 255, 255); /* set initial border */
+
+    animation: borderGradient 5s infinite alternate;
 }
 .home {
     color: white;
@@ -343,6 +357,26 @@ body {
     /* border-radius: 5px; */
     background-color: #ffffffb2;
 }
+.flappy {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox to ensure the inner div takes full space */
+    
+}
+.game-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.game-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;
+}
+
+
+
+
 
 footer {
     margin-top: 45%;

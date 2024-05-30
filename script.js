@@ -32,8 +32,29 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(updateTimeAndDate, 1000);
 
     homeButton.addEventListener("click", function() {
-        homeDiv.style.display = "none";
-        iconsDiv.style.display = "block";
+
+        const gameScript = document.querySelector('#gameScript');
+        // Check if the game script is present before exiting the game
+        if (gameScript) {
+            gameScript.parentNode.removeChild(gameScript); // Remove the game script from the DOM
+            gameScript.src = ''; // Stop the game
+        }
+
+        if (iconsDiv.style.display === "block") { // Check if icons are currently displayed
+            homeDiv.style.display = "block"; // Display the home div
+            iconsDiv.style.display = "none"; // Hide the icons div
+            
+            
+            homeDiv.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.redd.it/kf45lqdfiyb31.gif')";
+            homeDiv.style.backgroundSize = "cover";
+            homeDiv.style.width = "400px"; // Set width of the box
+            homeDiv.style.height = "800px";
+            homeDiv.style.borderRadius = "40px";
+        } else { // If icons are not currently displayed
+            homeDiv.style.display = "none"; // Hide the home div
+            iconsDiv.style.display = "block"; // Display the icons div
+        }
+
         contactsDiv.style.display = "none";
         mesDiv.style.display = "none";
         cameraDiv.style.display = "none";
