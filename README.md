@@ -4,5 +4,5 @@ A project created with HTML, CSS, and JavaScript that lets users interact with a
 ## Demo
 ![Demo of the project](https://media.giphy.com/media/jeSulSmXZSDRJlBY0I/giphy.gif)
 
-## Link
-![Link of the project](https://aunavarra-phone.netlify.app)
+## Live Demo
+You can try out the project live [here](https://aunavarra-phone.netlify.app/).
