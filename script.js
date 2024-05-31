@@ -26,6 +26,69 @@ document.addEventListener("DOMContentLoaded", function() {
     const googleDiv = document.querySelector(".google");
     const flappyDiv = document.querySelector(".flappy");
 
+    const addContacts = document.getElementById("addContacts");
+    const removeContacts = document.getElementById("removeContacts");
+    const removeSomeoneButtons = document.querySelectorAll(".removeSomeone");
+    const conDiv = document.querySelector(".con-div");
+    const addSomeone = document.getElementById("addSomeone");
+    const saveContact = document.getElementById("saveContact");
+    const cancelContact = document.getElementById("cancelContact");
+    const newContactInput = document.getElementById("newContact");
+
+    addContacts.addEventListener("click", function() {
+        conDiv.style.display = "none";
+        addSomeone.style.display = "block";
+    });
+
+    saveContact.addEventListener("click", function() {
+        const contactName = newContactInput.value.trim();
+    
+        if (contactName !== "") {
+            // Hide all existing remove buttons that are not already hidden
+            document.querySelectorAll(".removeSomeone:not([style='display: none;'])").forEach(button => {
+                button.style.display = "none";
+            });
+    
+            // Create a new div element for the new contact
+            const newContactDiv = document.createElement("div");
+            
+            // Set a unique id for the new contact div (you can adjust the id naming convention as needed)
+            newContactDiv.id = `con${conDiv.children.length + 1}`;
+            
+            // Set the content of the new contact div to include the contact name and remove button
+            newContactDiv.innerHTML = `${contactName}<button class="removeSomeone" style="display: none;">🗑️</button>`;
+            
+            // Append the new contact div to the .con-div container
+            conDiv.appendChild(newContactDiv);
+    
+            // Clear the input field and hide the addSomeone div
+            newContactInput.value = "";
+            addSomeone.style.display = "none"; 
+            conDiv.style.display = "block";
+    
+            // Add event listener to the remove button of the new contact
+            const newRemoveButton = newContactDiv.querySelector(".removeSomeone");
+            newRemoveButton.addEventListener("click", function() {
+                // Remove the corresponding input element
+                newContactDiv.remove();
+            });
+        }
+    });
+        
+    removeContacts.addEventListener("click", function() {
+        // Toggle visibility of all remove buttons
+        document.querySelectorAll(".removeSomeone").forEach(button => {
+            button.style.display = button.style.display === "none" ? "inline" : "none";
+        });
+    });
+    cancelContact.addEventListener("click", function() {
+        // Clear the input field and hide the addSomeone div
+        newContactInput.value = "";
+        addSomeone.style.display = "none"; 
+        conDiv.style.display = "block";
+    });
+
+
 
     // Update time and date every second
     updateTimeAndDate();
@@ -54,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function() {
             homeDiv.style.display = "none"; // Hide the home div
             iconsDiv.style.display = "block"; // Display the icons div
         }
+
+        // addSomeone.style.display = "none"
 
         contactsDiv.style.display = "none";
         mesDiv.style.display = "none";

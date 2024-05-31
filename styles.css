@@ -151,12 +151,28 @@ body {
     overflow-y: auto;
     /* background-color: aquamarine; */
 }
-.con-div{
+.con-div {
+    display: flex;
+    flex-direction: column;
     margin-top: 5px;
     height: 350px;
     overflow-y: auto;
 }
-#con1, #con2, #con3, #con4, #con5, #con6 {
+.con-div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.removeSomeone {
+    background: none;
+    border: none;
+    /* font-size: inherit; */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#addSomeone input, .con-div div {
     width: 150;
     height: 300;
     border: 2px solid white;
@@ -165,6 +181,27 @@ body {
     font-size: 30px;
     padding: 15px;
     background-color: rgba(160, 163, 165, 0.664);
+}
+#addSomeone {
+    text-align: center;
+}
+#addSomeone input {
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 15px;
+    background-color: rgba(160, 163, 165, 0.664);
+}
+#saveContact, #cancelContact {
+    width: 100px; /* Set a width for the button */
+    height: 40px; /* Set a height for the button */
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 18px; /* Adjust font size */
+    background-color: rgba(0, 123, 255, 0.8); /* Button background color */
+    color: white;
+    cursor: pointer;
 }
 #mes1, #mes2, #mes3, #mes4, #mes5, #mes6 {
     width: 150;
@@ -220,7 +257,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.googleDiv button, .youtubeDiv button {
+.googleDiv button, .youtubeDiv button{
     margin-top: 20px;
     width: 100px;
     height: 30px;
@@ -233,51 +270,45 @@ body {
     font-size: 40px;
 }
 
-#song1, #song2, #song3, #song4, #song5 {
+.song {
+    background-size: cover;
+    background-position: center;
     width: 150;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 30px;
-    margin: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 5px 10px 5px;
     font-size: 15px;
-    padding: 20px;
-    /* background-color: rgba(160, 163, 165, 0.664); */
-    
+    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 #song1 {
     background-image: 
         linear-gradient(rgba(110, 106, 106, 0.671), rgba(0, 0, 0, 0.500)), 
         url('https://archive.org/download/LostInSpaceCloserCover/570d95e059841aaf53a22bb5dc5f238b.jpg');
-    background-size: cover;
-    background-position: center;
 }
 #song2 {
     background-image: 
         linear-gradient(rgba(48, 45, 45, 0.671), rgba(0, 0, 0, 0.500)), 
         url('https://images.genius.com/93e9e3fa0ab18bc4613d385f287090c6.1000x1000x1.jpg');
-    background-size: cover;
-    background-position: center;
 }
 #song3 {
     background-image: 
         linear-gradient(rgba(248, 247, 247, 0.671), rgba(0, 0, 0, 0.500)), 
         url('https://i1.sndcdn.com/artworks-000438083241-c2ymws-t500x500.jpg');
-    background-size: cover;
-    background-position: center;
 }
 #song4 {
     background-image: 
         linear-gradient(rgba(48, 45, 45, 0.671), rgba(0, 0, 0, 0.500)), 
         url('https://i1.sndcdn.com/artworks-000579326945-gbd9ep-t500x500.jpg');
-    background-size: cover;
-    background-position: center;
 }
 #song5 {
     background-image: 
         linear-gradient(rgba(161, 153, 153, 0.671), rgba(0, 0, 0, 0.500)), 
         url('https://i1.sndcdn.com/artworks-000073742971-x8ly4d-t500x500.jpg');
-    background-size: cover;
-    background-position: center;
 }
 .songDiv {
     display: flex;
@@ -286,27 +317,24 @@ body {
     height: 400px;
     overflow-y: auto;
 }
-.song {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.song div {
-    flex-grow: 1;
-}
+
 .song button {
     margin-left: 20px;
-    background-color: rgba(255, 255, 255, 0.432);
-    border-radius: 100px;
-    border: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Adjust the opacity for better visibility */
+    border: none;
+    border-radius: 20px; /* Adjust the border radius for a smoother look */
+    padding: 10px 20px; /* Add padding for better spacing */
+    color: #333; /* Change text color for better contrast */
+    font-size: 14px; /* Adjust font size for better readability */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition on hover */
 }
+
 .song button:hover {
-    background-color: rgba(136, 129, 129, 0.432);
+    background-color: rgba(136, 129, 129, 0.8); /* Darken the background color on hover */
+    color: white; /* Change text color on hover for better contrast */
 }
+
 .camera {
     text-align: center;
     color: white;
@@ -372,21 +400,4 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 38px;
-}
-
-
-
-
-
-footer {
-    margin-top: 45%;
-    padding: 5px;
-    /* position: absolute; */
-    bottom: 0;
-    width: 100%; /* Ensure footer spans the entire width of the container */
-    height: 50px; /* Adjust height as needed */
-    font-size: 20px;
-    color: aquamarine;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color */
 }
